@@ -1,6 +1,10 @@
+=== Fork Details ===
+
+The basis for this fork was to abstract the different options types as much as possible to make the framework more extendable. Allows people to add/edit/remove option types more easily. It is almost certainly not as efficient as it can/should be, it was basically a 2 hour copy&paste job with a bit of abstraction thrown in. Will need sanity checking and also proper loading of per-option css/js using more approproate hooks.
+
 === Options Framework Theme ===
 
-Contributors: Devin Price
+Contributors: Devin Price, Richard Tape
 Tags: options, theme options
 Donate link: http://bit.ly/options-donate
 Requires at least: 3.3
