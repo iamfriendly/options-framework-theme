@@ -107,14 +107,6 @@ function optionsframework_options() {
 		'type' => 'heading');
 
 	$options[] = array(
-		'name' => __('Input Text Mini', 'options_framework_theme'),
-		'desc' => __('A mini text input field.', 'options_framework_theme'),
-		'id' => 'example_text_mini',
-		'std' => 'Default',
-		'class' => 'mini',
-		'type' => 'text');
-
-	$options[] = array(
 		'name' => __('Input Text', 'options_framework_theme'),
 		'desc' => __('A text input field.', 'options_framework_theme'),
 		'id' => 'example_text',
@@ -260,6 +252,7 @@ function optionsframework_options() {
 
 	$options[] = array(
 		'name' => __('Text Editor', 'options_framework_theme'),
+		'class' => 'align-right',
 		'type' => 'heading' );
 
 	/**
