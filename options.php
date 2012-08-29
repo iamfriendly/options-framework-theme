@@ -172,6 +172,24 @@ function optionsframework_options() {
 		'type' => 'info');
 
 	$options[] = array(
+		'name' => __('Warning Info', 'options_framework_theme'),
+		'desc' => __('This is just some example information you can put in the panel.', 'options_framework_theme'),
+		'class' => 'highlight',
+		'type' => 'info');
+
+	$options[] = array(
+		'name' => __('Error Info', 'options_framework_theme'),
+		'desc' => __('This is just some example information you can put in the panel.', 'options_framework_theme'),
+		'class' => 'warning',
+		'type' => 'info');
+
+	$options[] = array(
+		'name' => __('Vital Info', 'options_framework_theme'),
+		'desc' => __('This is just some example information you can put in the panel.', 'options_framework_theme'),
+		'class' => 'vital',
+		'type' => 'info');
+
+	$options[] = array(
 		'name' => __('Input Checkbox', 'options_framework_theme'),
 		'desc' => __('Example checkbox, defaults to true.', 'options_framework_theme'),
 		'id' => 'example_checkbox',
@@ -186,6 +204,7 @@ function optionsframework_options() {
 		'name' => __('Check to Show a Hidden Text Input', 'options_framework_theme'),
 		'desc' => __('Click here and see what happens.', 'options_framework_theme'),
 		'id' => 'example_showhidden',
+		'group' => 'example_group',
 		'type' => 'checkbox');
 		
 	$options[] = array(
@@ -193,7 +212,17 @@ function optionsframework_options() {
 		'desc' => __('This option is hidden unless activated by a checkbox click.', 'options_framework_theme'),
 		'id' => 'example_text_hidden',
 		'std' => 'Hello',
-		'class' => 'hidden',
+		'class' => 'showontick',
+		'group' => 'example_group',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => __('Another Hidden Text Input', 'options_framework_theme'),
+		'desc' => __('This option is hidden unless activated by a checkbox click.', 'options_framework_theme'),
+		'id' => 'example_text_hidden_2',
+		'std' => 'Hello',
+		'class' => 'showontick',
+		'group' => 'example_group',
 		'type' => 'text');
 
 	$options[] = array(

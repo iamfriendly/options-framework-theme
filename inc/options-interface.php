@@ -70,7 +70,9 @@ function optionsframework_fields() {
 				$class .= ' ' . $value['class'];
 			}
 
-			$output .= '<div id="' . esc_attr( $id ) .'" class="' . esc_attr( $class ) . '">'."\n";
+			$group = ( isset( $value['group'] ) ) ? "data-group='" . $value['group'] . "'" : "";
+
+			$output .= '<div id="' . esc_attr( $id ) .'" class="' . esc_attr( $class ) . '" ' . $group . '>'."\n";
 			if ( isset( $value['name'] ) ) {
 				$output .= '<h4 class="heading">' . esc_html( $value['name'] ) . '</h4>' . "\n";
 			}
