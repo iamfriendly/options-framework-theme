@@ -65,6 +65,7 @@ function optionsframework_load_sanitization() {
 function optionsframework_init() {
 
 	// Include the required files
+	require_once dirname( __FILE__ ) . '/options-types.php';
 	require_once dirname( __FILE__ ) . '/options-interface.php';
 	require_once dirname( __FILE__ ) . '/options-medialibrary-uploader.php';
 	
@@ -306,7 +307,8 @@ function optionsframework_validate( $input ) {
 
 			// For a value to be submitted to database it must pass through a sanitization filter
 			if ( has_filter( 'of_sanitize_' . $option['type'] ) ) {
-				$clean[$id] = apply_filters( 'of_sanitize_' . $option['type'], $input[$id], $option );
+				if( isset( $input[$id] ) )
+					$clean[$id] = apply_filters( 'of_sanitize_' . $option['type'], $input[$id], $option );
 			}
 		}
 
