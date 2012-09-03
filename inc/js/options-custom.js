@@ -105,7 +105,7 @@ jQuery(document).ready(function($) {
 		if( $(this).find( 'input:checkbox' ).first().attr('checked') ){
 			var group_name = $(this).find( 'input:checkbox' ).first().parent().parent().parent().attr('data-group');
 			$( '.section[data-group="'+group_name+'"]' ).each( function(){
-				$(this).fadeIn();
+				$(this).show();
 			} );
 		}
 	});
@@ -119,7 +119,7 @@ jQuery(document).ready(function($) {
 		if( $(this).attr('checked') ){
 			
 			$( '.section[data-group="'+group_name+'"]' ).each( function(){
-				$(this).fadeIn();
+				$(this).slideDown();
 			} );
 		
 		}else{
@@ -128,7 +128,7 @@ jQuery(document).ready(function($) {
 
 				//Don't fade out the div containing the initial checkbox
 				if( $(this).attr( 'id' ) != id_of_checkbox_group ){
-					$(this).fadeOut();
+					$(this).slideUp();
 				}
 				
 			} );

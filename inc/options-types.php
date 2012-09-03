@@ -39,6 +39,13 @@
 
 			$this->html();
 
+			if( $this->value['type'] == "heading" )
+			{
+
+				
+
+			}
+
 			if ( ( $this->value['type'] != "heading" ) && ( $this->value['type'] != "info" ) ){
 
 				$this->output .= '</div>';
@@ -84,7 +91,8 @@
 		public function html()
 		{
 
-			if ($this->counter >= 2) {
+			if( $this->counter >= 2 )
+			{
 				$this->output .= '</div>'."\n";
 			}
 

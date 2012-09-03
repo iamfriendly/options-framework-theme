@@ -100,7 +100,11 @@ function optionsframework_options() {
 	// If using image radio buttons, define a directory path
 	$imagepath =  get_template_directory_uri() . '/images/';
 
+	global $options;
 	$options = array();
+
+	//Allow us to hook into here from elsewhere
+	do_action( 'of_set_options_before_defaults', $options );
 
 	$options[] = array(
 		'name' => __('Basic Settings', 'options_framework_theme'),
@@ -304,6 +308,8 @@ function optionsframework_options() {
 		'id' => 'example_editor',
 		'type' => 'editor',
 		'settings' => $wp_editor_settings );
+
+	do_action( 'of_set_options_after_defaults', $options );
 
 	return $options;
 }

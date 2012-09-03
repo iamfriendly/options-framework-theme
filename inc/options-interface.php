@@ -11,12 +11,17 @@ function optionsframework_tabs() {
 	$menu = '';
 
 	foreach ($options as $value) {
+		
 		// Heading for Navigation
 		if ($value['type'] == "heading") {
+
 			$jquery_click_hook = preg_replace('/[^a-zA-Z0-9._\-]/', '', strtolower($value['name']) );
 			$jquery_click_hook = "of-option-" . $jquery_click_hook;
+			
 			$added_class = ( isset( $value['class'] ) ) ? $value['class'] : "";
+			
 			$menu .= '<a id="'.  esc_attr( $jquery_click_hook ) . '-tab" class="nav-tab ' . $added_class . '" title="' . esc_attr( $value['name'] ) . '" href="' . esc_attr( '#'.  $jquery_click_hook ) . '">' . esc_html( $value['name'] ) . '</a>';
+
 		}
 	}
 
